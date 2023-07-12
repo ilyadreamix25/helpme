@@ -1,0 +1,63 @@
+{
+    "@@locale": "en",
+    "appName": "helpme",
+    "doYouNeedHelp": "Do you need help?\nTell about it!",
+    "weWillHelp": "We and our friends will help you deal with your problems!",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "startWithGoogleAccount": "Start with Google Account",
+    "startWithAppleId": "Start with Apple ID",
+    "itWontTakeLong": "Login first.\nIt won't take long!",
+    "close": "Close",
+    "areYouAlreadyWithUs": "Are you already with us?",
+    "serviceUnavailable": "Service unavailable!",
+    "serviceUnavailableFull": "This service is unavailable right now.\nPlease try again later",
+    "slogan": "There will always be people who can help you!",
+    "version": "Created by IlyaDreamix, 2023\nVersion {version} ({versionCode})",
+    "@version": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            },
+            "versionCode": {
+                "type": "int"
+            }
+        }
+    },
+    "about": "About",
+    "weHaveBeenWaiting": "We have been waiting for you for a long time!",
+    "provideSomeInfo": "Provide some information about yourself",
+    "nickname": "Nickname",
+    "nicknameRules": "6-24 symbols\nA-Z, a-z, numbers and underscores",
+    "age": "Age",
+    "optional": "(Optional)",
+    "continueButton": "Continue",
+    "invalidValue": "Invalid value",
+    "requiredValue": "(Required)",
+    "nowItsTimeForSafety": "Now it's time for safety",
+    "comeUpWithPin": "Come up with and remember a PIN code to enter the HelpMe app",
+    "pinWarning": "Keep in mind that this PIN will be used every time you log into your account in the future",
+    "finish": "Finish",
+    "nicknameUnavaliable": "This nickname is not available",
+    "oops": "Oops...",
+    "welcomeBack": "Welcome back!",
+    "callToMindPinCode": "Call to mind the PIN code that you specified during registration",
+
+    "stateOk": "Ok",
+    "stateInternalServerError": "Internal server error. Please try again later",
+    "stateInvalidRequest": "Invalid request. Please update the app to the latest version",
+    "stateContentNotFound": "Content not found",
+    "stateInvalidMethod": "Invalid method. Please update the app to the latest version",
+    "stateServiceUnavailable": "Service unavailable. Please update the app to the latest version",
+    "stateUserAlreadyExists": "User with this email already exists. Please sign in",
+    "stateUserDoesNotExist": "User does not exist",
+    "stateUnauthorized": "Session expired. Please relogin",
+    "stateInvalidCredentials": "Invalid credentials (PIN code is incorrect)",
+    "stateTooManyRequests": "Too many requests. Please try again later",
+    "stateTooYoung": "You are too young! Come back when you're 14",
+    "stateNicknameUnavailable": "This nickname is not available",
+    "stateInvalidIdToken": "Invalid request. Please update the app to the latest version",
+    "stateEmailIsNotVerified": "Your email is not verified",
+    "stateYouAreBanned": "You are banned",
+    "stateUnknownState": "Unknown error, please try again later"
+}

@@ -1,0 +1,63 @@
+{
+    "@@locale": "uk",
+    "appName": "helpme",
+    "doYouNeedHelp": "Вам потрібна допомога?\nРозкажіть про це!",
+    "weWillHelp": "Ми та наші друзі допоможуть вам розібратися зі своїми проблемами!",
+    "signIn": "Вхід",
+    "signUp": "Реєстрація",
+    "startWithGoogleAccount": "Почати з акаунтом Google",
+    "startWithAppleId": "Почати з Apple ID",
+    "itWontTakeLong": "Для початку потрібно увійти.\nЦе не займе багато часу!",
+    "close": "Закрити",
+    "areYouAlreadyWithUs": "Ви вже з нами?",
+    "serviceUnavailable": "Сервіс недоступний!",
+    "serviceUnavailableFull": "Цей сервіс не доступний в даний момент.\nСпробуйте ще раз пізніше",
+    "slogan": "Завжди знайдуться люди, які зможуть вам допомогти!",
+    "version": "Автор: IlyaDreamix, 2023\nВерсія {version} ({versionCode})",
+    "@version": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            },
+            "versionCode": {
+                "type": "int"
+            }
+        }
+    },
+    "about": "Про додаток",
+    "weHaveBeenWaiting": "Ми вас вже зачекалися!",
+    "provideSomeInfo": "Надайте трохи інформації про себе",
+    "nickname": "Нікнейм",
+    "nicknameRules": "6-24 символів\nA-Z, a-z, числа та нижні підкреслення",
+    "age": "Вік",
+    "optional": "(Необов'язково)",
+    "continueButton": "Продовжити",
+    "invalidValue": "Неправильне значення",
+    "requiredValue": "(Обов'язково)",
+    "nowItsTimeForSafety": "Тепер настав час для безпеки",
+    "comeUpWithPin": "Придумайте та запам'ятайте PIN-код для входу в додаток",
+    "pinWarning": "Пам'ятайте, що цей PIN-код буде використовуватися в майбутньому при кожному вході у обліковий запис",
+    "finish": "Завершити",
+    "nicknameUnavaliable": "Цей нікнейм недоступний",
+    "oops": "Упс...",
+    "welcomeBack": "З поверненням!",
+    "callToMindPinCode": "Згадайте PIN-код який ви вказали під час реєстрації",
+
+    "stateOk": "Ок",
+    "stateInternalServerError": "Внутрішня помилка сервера. Будь ласка, спробуйте ще раз пізніше",
+    "stateInvalidRequest": "Неправильний запит. Будь ласка, оновіть додаток до останньої версії",
+    "stateContentNotFound": "Контент не знайдено",
+    "stateInvalidMethod": "Неправильний метод. Будь ласка, оновіть додаток до останньої версії",
+    "stateServiceUnavailable": "Сервіс недоступний. Будь ласка, оновіть додаток до останньої версії",
+    "stateUserAlreadyExists": "Користувач з такою електронною адресою вже існує. Будь ласка, увійдіть до свого облікового запису",
+    "stateUserDoesNotExist": "Користувач не існує",
+    "stateUnauthorized": "Сесія закінчилася. Будь ласка, виконайте повторну авторизацію",
+    "stateInvalidCredentials": "Неправильні облікові дані (неправильний PIN-код)",
+    "stateTooManyRequests": "Занадто багато запитів. Будь ласка, спробуйте ще раз пізніше",
+    "stateTooYoung": "Ви ще замалі! Повертайтеся, коли вам виповниться 14 років",
+    "stateNicknameUnavailable": "Цей нікнейм недоступний",
+    "stateInvalidIdToken": "Неправильний запит. Будь ласка, оновіть додаток до останньої версії",
+    "stateEmailIsNotVerified": "Ваша електронна адреса не підтверджена",
+    "stateYouAreBanned": "Ви були забанені за порушення правил платформи",
+    "stateUnknownState": "Невідома помилка, будь ласка, спробуйте ще раз пізніше"
+}

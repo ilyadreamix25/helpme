@@ -1,0 +1,63 @@
+{
+    "@@locale": "ru",
+    "appName": "helpme",
+    "doYouNeedHelp": "Вам нужна помощь?\nРасскажите об этом!",
+    "weWillHelp": "Мы и наши друзья помогут вам разобраться со своими проблемами!",
+    "signIn": "Вход",
+    "signUp": "Регистрация",
+    "startWithGoogleAccount": "Начать с аккаунтом Google",
+    "startWithAppleId": "Начать с Apple ID",
+    "itWontTakeLong": "Для начала нужно войти.\nЭто не займет много времени!",
+    "close": "Закрыть",
+    "areYouAlreadyWithUs": "Вы уже с нами?",
+    "serviceUnavailable": "Сервис недоступен!",
+    "serviceUnavailableFull": "Этот сервис не доступен в данный момент.\nПопробуйте ещё раз позже",
+    "slogan": "Всегда найдутся люди, которые смогут вам помочь!",
+    "version": "Создатель: IlyaDreamix, 2023\nВерсия {version} ({versionCode})",
+    "@version": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            },
+            "versionCode": {
+                "type": "int"
+            }
+        }
+    },
+    "about": "О приложении",
+    "weHaveBeenWaiting": "Мы вас уже заждались!",
+    "provideSomeInfo": "Предоставьте немного информации о себе",
+    "nickname": "Никнейм",
+    "nicknameRules": "6-24 символов\nA-Z, a-z, числа и нижние подчеркивания",
+    "age": "Возраст",
+    "optional": "(Необязательно)",
+    "continueButton": "Продолжить",
+    "invalidValue": "Неверное значение",
+    "requiredValue": "(Обязательно)",
+    "nowItsTimeForSafety": "Теперь настало время для безопасности",
+    "comeUpWithPin": "Придумайте и запомните PIN-код для входа в приложение",
+    "pinWarning": "Помните, что этот PIN-код будет использоваться в будущем при каждом входе в ваш аккаунт",
+    "finish": "Завершить",
+    "nicknameUnavaliable": "Этот никнейм недоступен",
+    "oops": "Упс...",
+    "welcomeBack": "С возвращением!",
+    "callToMindPinCode": "Вспомните PIN-код который вы указали во время регистрации",
+
+    "stateOk": "Ок",
+    "stateInternalServerError": "Внутренняя ошибка сервера. Пожалуйста, попробуйте еще раз позже",
+    "stateInvalidRequest": "Неверный запрос. Пожалуйста, обновите приложение до последней версии",
+    "stateContentNotFound": "Контент не найден",
+    "stateInvalidMethod": "Неверный метод. Пожалуйста, обновите приложение до последней версии",
+    "stateServiceUnavailable": "Сервис недоступен. Пожалуйста, обновите приложение до последней версии",
+    "stateUserAlreadyExists": "Пользователь с таким электронным адресом уже существует. Пожалуйста, войдите в свой аккаунт",
+    "stateUserDoesNotExist": "Пользователь не существует",
+    "stateUnauthorized": "Сессия истекла. Пожалуйста, выполните повторную авторизацию",
+    "stateInvalidCredentials": "Неверные учетные данные (неправильный PIN-код)",
+    "stateTooManyRequests": "Слишком много запросов. Пожалуйста, попробуйте еще раз позже",
+    "stateTooYoung": "Вы слишком молоды! Возвращайтесь, когда вам исполнится 14 лет",
+    "stateNicknameUnavailable": "Этот никнейм недоступен",
+    "stateInvalidIdToken": "Неверный запрос. Пожалуйста, обновите приложение до последней версии",
+    "stateEmailIsNotVerified": "Ваш электронный адрес не подтвержден",
+    "stateYouAreBanned": "Вы были забанены за нарушение правил платформы",
+    "stateUnknownState": "Неизвестная ошибка, пожалуйста, попробуйте ещё раз позже"
+}
