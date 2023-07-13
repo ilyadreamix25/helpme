@@ -1,4 +1,4 @@
-import 'package:helpme/objects/user.dart';
+import 'package:helpme/core/objects/user.dart';
 
 abstract class SignUpStatus {
   final bool isFirstStage;
@@ -41,7 +41,7 @@ class SignUpLoadingStatus extends SignUpStatus {
 }
 
 class SignUpSuccess extends SignUpStatus {
-  final User user;
+  final UserPrivate user;
   final String authToken;
 
   const SignUpSuccess(this.user, this.authToken) : super(isFirstStage: false, isReady: true);

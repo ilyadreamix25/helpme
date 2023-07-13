@@ -9,7 +9,7 @@ part of 'signup_model.dart';
 _$_SignUpModel _$$_SignUpModelFromJson(Map<String, dynamic> json) =>
     _$_SignUpModel(
       authToken: json['authToken'] as String,
-      user: User.fromJson(json['user'] as Map<String, dynamic>),
+      user: UserPrivate.fromJson(json['user'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_SignUpModelToJson(_$_SignUpModel instance) =>

@@ -8,32 +8,10 @@ import 'package:helpme/signin/data/signin_bloc.dart';
 import 'package:helpme/signin/signin_content.dart';
 import 'package:provider/provider.dart';
 
-class SignInScreen extends StatefulWidget {
+class SignInScreen extends StatelessWidget {
   final bool useApple;
 
   const SignInScreen({super.key, this.useApple = false});
-
-  @override
-  State<StatefulWidget> createState() => _SignInScreenState();
-}
-
-class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 20),
-    )..repeat();
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +22,10 @@ class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderSt
       addNavigationButton: true,
       title: Text(locale.appName),
       appBarBackgroundColor: theme.colorScheme.primary,
-      actions: [_moreButton()],
+      actions: [_moreButton(context)],
       backgroundColor: theme.colorScheme.primary,
       body: Provider.value(
-        value: widget.useApple,
+        value: useApple,
         child: BlocProvider(
           create: (_) => SignInBloc(),
           child: const SignInContent(),
@@ -56,7 +34,7 @@ class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderSt
     );
   }
 
-  Widget _moreButton() {
+  Widget _moreButton(BuildContext context) {
     final theme = Theme.of(context);
     final locale = AppLocalizations.of(context)!;
 
@@ -72,7 +50,7 @@ class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderSt
           )
         ),
         icon: Icon(Icons.menu_rounded, color: theme.colorScheme.onSurface),
-        onSelected: _onMenuItenClicked,
+        onSelected: (option) => _onMenuItemClicked(context, option),
         itemBuilder: (_) => [
           PopupMenuItem(
             value: 0,
@@ -92,13 +70,11 @@ class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderSt
     );
   }
 
-  void _onMenuItenClicked(int index) {
-    switch (index) {
+  void _onMenuItemClicked(BuildContext context, int option) {
+    switch (option) {
       case 0:
         Navigator.pushNamed(context, HelpMeNavigation.aboutRoute);
         return;
     }
   }
-
-  // #endregion
 }

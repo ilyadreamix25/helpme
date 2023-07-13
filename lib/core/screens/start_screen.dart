@@ -185,7 +185,7 @@ class _StartScreenState extends State<StartScreen> with SingleTickerProviderStat
           )
         ),
         icon: Icon(Icons.menu_rounded, color: theme.colorScheme.onSurface),
-        onSelected: _onMenuItenClicked,
+        onSelected: _onMenuItemClicked,
         itemBuilder: (_) => [
           PopupMenuItem(
             value: 0,
@@ -273,7 +273,7 @@ class _StartScreenState extends State<StartScreen> with SingleTickerProviderStat
     );
   }
 
-  void _onMenuItenClicked(int index) {
+  void _onMenuItemClicked(int index) {
     switch (index) {
       case 0:
         Navigator.pushNamed(context, HelpMeNavigation.aboutRoute);

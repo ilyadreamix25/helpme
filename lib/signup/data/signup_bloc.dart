@@ -136,6 +136,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
           authToken: response.data!.authToken,
           lastLogin: response.data!.user.lastSignedInAt,
           pinCode: state.pin,
+          method: 'google',
         );
 
         emit(

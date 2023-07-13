@@ -16,6 +16,9 @@ class Auth {
     this.authToken,
     this.method,
   );
+
+  @override
+  String toString() => 'Auth(pinCode=$pinCode, authToken=$authToken, lastLogin=$lastLogin, method=$method)';
 }
 
 class AuthService {
@@ -66,8 +69,15 @@ class AuthService {
     final lastLogin = await _storage.read(key: _kLastLogin);
     final authToken = await _storage.read(key: _kAuthToken);
     final method = await _storage.read(key: _kMethod);
+
+    final auth = Auth(pinCode!, int.parse(lastLogin!), authToken!, method!);
+
+    LogUtility.info(
+      tag: 'AuthService.getAuth',
+      message: auth.toString(),
+    );
     
-    return Auth(pinCode!, int.parse(lastLogin!), authToken!, method!);
+    return auth;
   }
 
   static Future<bool> relogin() async {

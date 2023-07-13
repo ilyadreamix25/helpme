@@ -21,7 +21,7 @@ class SignUpFirstStage extends StatelessWidget {
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status is SignUpNicknameNotAvailableStatus) {
-          showOopsDialog(context, locale.nicknameUnavaliable);
+          showOopsDialog(context, locale.nicknameUnavailable);
         } else if (state.status is SignUpNicknameFailedStatus) {
           final apiState = state.status as SignUpNicknameFailedStatus;
           showApiErrorDialog(context, apiState.state, apiState.code);
@@ -29,8 +29,8 @@ class SignUpFirstStage extends StatelessWidget {
       },
       child: const Stack(
         children: [
-          SignUpFirstStageTopContent(),
           SignUpSpinningCircle(),
+          SignUpFirstStageTopContent(),
           SignUpFirstStageSubmitButton(),
         ],
       ),

@@ -15,7 +15,7 @@ class SignUpFirstStageTopContent extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context);
 
     return Padding(
-      padding: EdgeInsets.fromLTRB(16, 16, 16, mediaQuery.padding.bottom + 16),
+      padding: EdgeInsets.fromLTRB(16, 16, 16, mediaQuery.viewInsets.bottom + 16),
       child: const SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(

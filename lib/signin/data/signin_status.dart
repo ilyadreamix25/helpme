@@ -1,4 +1,4 @@
-import 'package:helpme/objects/user.dart';
+import 'package:helpme/core/objects/user.dart';
 
 abstract class SignInStatus {
   final bool buttonHidden;
@@ -19,7 +19,7 @@ class SignInLoadingStatus extends SignInStatus {
 }
 
 class SignInSuccessStatus extends SignInStatus {
-  final User user;
+  final UserPrivate user;
   final String authToken;
 
   const SignInSuccessStatus(this.user, this.authToken) : super(false);

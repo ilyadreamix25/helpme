@@ -21,7 +21,7 @@ SignUpModel _$SignUpModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SignUpModel {
   String get authToken => throw _privateConstructorUsedError;
-  User get user => throw _privateConstructorUsedError;
+  UserPrivate get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,9 +35,9 @@ abstract class $SignUpModelCopyWith<$Res> {
           SignUpModel value, $Res Function(SignUpModel) then) =
       _$SignUpModelCopyWithImpl<$Res, SignUpModel>;
   @useResult
-  $Res call({String authToken, User user});
+  $Res call({String authToken, UserPrivate user});
 
-  $UserCopyWith<$Res> get user;
+  $UserPrivateCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -64,14 +64,14 @@ class _$SignUpModelCopyWithImpl<$Res, $Val extends SignUpModel>
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as User,
+              as UserPrivate,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get user {
-    return $UserCopyWith<$Res>(_value.user, (value) {
+  $UserPrivateCopyWith<$Res> get user {
+    return $UserPrivateCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value) as $Val);
     });
   }
@@ -85,10 +85,10 @@ abstract class _$$_SignUpModelCopyWith<$Res>
       __$$_SignUpModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String authToken, User user});
+  $Res call({String authToken, UserPrivate user});
 
   @override
-  $UserCopyWith<$Res> get user;
+  $UserPrivateCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -113,7 +113,7 @@ class __$$_SignUpModelCopyWithImpl<$Res>
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as User,
+              as UserPrivate,
     ));
   }
 }
@@ -129,7 +129,7 @@ class _$_SignUpModel implements _SignUpModel {
   @override
   final String authToken;
   @override
-  final User user;
+  final UserPrivate user;
 
   @override
   String toString() {
@@ -167,7 +167,7 @@ class _$_SignUpModel implements _SignUpModel {
 abstract class _SignUpModel implements SignUpModel {
   const factory _SignUpModel(
       {required final String authToken,
-      required final User user}) = _$_SignUpModel;
+      required final UserPrivate user}) = _$_SignUpModel;
 
   factory _SignUpModel.fromJson(Map<String, dynamic> json) =
       _$_SignUpModel.fromJson;
@@ -175,7 +175,7 @@ abstract class _SignUpModel implements SignUpModel {
   @override
   String get authToken;
   @override
-  User get user;
+  UserPrivate get user;
   @override
   @JsonKey(ignore: true)
   _$$_SignUpModelCopyWith<_$_SignUpModel> get copyWith =>

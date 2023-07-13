@@ -6,33 +6,12 @@ import 'package:helpme/core/widgets/scaffold.dart';
 import 'package:helpme/navigation.dart';
 import 'package:helpme/signup/data/signup_bloc.dart';
 import 'package:helpme/signup/signup_content.dart';
+import 'package:provider/provider.dart';
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends StatelessWidget {
   final bool useApple;
 
   const SignUpScreen({super.key, this.useApple = false});
-
-  @override
-  State<StatefulWidget> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 20),
-    )..repeat();
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,16 +22,19 @@ class _SignUpScreenState extends State<SignUpScreen> with SingleTickerProviderSt
       addNavigationButton: true,
       title: Text(locale.appName),
       appBarBackgroundColor: theme.colorScheme.primary,
-      actions: [_moreButton()],
+      actions: [_moreButton(context)],
       backgroundColor: theme.colorScheme.primary,
-      body: BlocProvider(
-        create: (_) => SignUpBloc(),
-        child: const SignUpContent(),
+      body: Provider.value(
+        value: useApple,
+        child: BlocProvider(
+          create: (_) => SignUpBloc(),
+          child: const SignUpContent(),
+        ),
       ),
     );
   }
   
-  Widget _moreButton() {
+  Widget _moreButton(BuildContext context) {
     final theme = Theme.of(context);
     final locale = AppLocalizations.of(context)!;
 
@@ -68,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> with SingleTickerProviderSt
           )
         ),
         icon: Icon(Icons.menu_rounded, color: theme.colorScheme.onSurface),
-        onSelected: _onMenuItemClicked,
+        onSelected: (option) => _onMenuItemClicked(context, option),
         itemBuilder: (_) => [
           PopupMenuItem(
             value: 0,
@@ -88,8 +70,8 @@ class _SignUpScreenState extends State<SignUpScreen> with SingleTickerProviderSt
     );
   }
 
-  void _onMenuItemClicked(int index) {
-    switch (index) {
+  void _onMenuItemClicked(BuildContext context, int option) {
+    switch (option) {
       case 0:
         Navigator.pushNamed(context, HelpMeNavigation.aboutRoute);
         return;

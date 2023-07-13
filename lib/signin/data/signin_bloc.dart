@@ -71,7 +71,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
         idToken: auth.idToken!,
       );
 
-      if (!response.isSuccesful) {
+      if (!response.isSuccessful) {
         emit(
           state.copyWith(status: SignInErrorStatus(
             response.state,
@@ -85,6 +85,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
         authToken: response.data!.authToken,
         lastLogin: response.data!.user.lastSignedInAt,
         pinCode: state.pinCode,
+        method: 'google',
       );
 
       emit(

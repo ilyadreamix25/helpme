@@ -4,6 +4,7 @@ import 'package:helpme/core/widgets/scale_on_press.dart';
 class HelpMeScaffold extends StatelessWidget {
   final Widget body;
   final Widget? title;
+  final PreferredSizeWidget? bottom;
   final List<Widget>? actions;
   final bool? addNavigationButton;
   final bool? extendBodyBehindAppBar;
@@ -15,6 +16,7 @@ class HelpMeScaffold extends StatelessWidget {
     super.key,
     required this.body,
     this.title,
+    this.bottom,
     this.actions,
     this.addNavigationButton,
     this.extendBodyBehindAppBar,
@@ -58,6 +60,7 @@ class HelpMeScaffold extends StatelessWidget {
         titleSpacing: addNavigationButton ?? false ? 0 : null,
         automaticallyImplyLeading: false,
       ),
+      bottomNavigationBar: bottom,
       backgroundColor: backgroundColor ?? theme.colorScheme.surface,
       extendBodyBehindAppBar: extendBodyBehindAppBar ?? false,
       body: body,

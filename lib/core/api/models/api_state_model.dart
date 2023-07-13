@@ -20,5 +20,5 @@ class ApiStateModel<T> with _$ApiStateModel<T> {
     T Function(Object? json) fromJsonT,
   ) => _$ApiStateModelFromJson(json, fromJsonT);
 
-  bool get isSuccesful => code == 0;
+  bool get isSuccessful => code == 0;
 }
